@@ -1,0 +1,13 @@
+.list {
+    border: 1px solid deeppink;
+    background: hotpink;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    border-right: 1px solid lightpink;
+    padding-right: 10px;
+    cursor: pointer;
+}
