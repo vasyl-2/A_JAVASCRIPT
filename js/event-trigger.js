@@ -1,5 +1,5 @@
 function addListenerToList() {
-    document.querySelector('.list').addEventListener('click', debugEventTarget, true);
+    document.querySelector('.list').addEventListener('click', debugEventTarget, false);
 }
 
 // function addListenerToBody() {
@@ -8,10 +8,10 @@ function addListenerToList() {
 
 function addListenerToBody() {
     // false - is default
-    document.querySelector('body').addEventListener('click', debugEventTarget, true);
+    document.querySelector('body').addEventListener('click', debugEventTarget, false);
 }
 
 function addListenerToItem() {
-    document.querySelector('.item1').addEventListener('click', debugEventTarget, true );
+    document.querySelector('.item1').addEventListener('click', debugEventTarget, false );
 }
 

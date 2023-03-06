@@ -1,4 +1,8 @@
-addListenerToItem();
-addListenerToList();
+// addListenerToItem();
+// addListenerToList();
 addListenerToBody();
 
+addListenerToList();
+
+
+addListenerToItem();
