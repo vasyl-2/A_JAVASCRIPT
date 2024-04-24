@@ -55,8 +55,8 @@ function tryPromiseCPUIntensiveWithWorker() {
     }
 }
 
-addListener();
+// addListener();
 // setTime();
 // tryPromiseCPUIntensive();
-tryPromiseCPUIntensiveWithWorker();
+// tryPromiseCPUIntensiveWithWorker();
 
