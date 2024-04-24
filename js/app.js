@@ -3,7 +3,16 @@
 
 function cpuPress() {
     let i = 0;
-    while (i < 9000000000) { i++; }
+    while (i < 5_000_000_000) {
+        i++;
+    }
+}
+
+function cpuPressFor() {
+    let counter = 0;
+    for (let i = 0; i < 5_000_000_000; i++) {
+        counter++;
+    }
 }
 
 function setTime() {
@@ -37,7 +46,17 @@ function tryPromiseCPUIntensive() {
         console.log('PROMISED_RESULT____', res);
     })
 }
+
+function tryPromiseCPUIntensiveWithWorker() {
+    const myWorker = new Worker('js/worker.js');
+    myWorker.postMessage('start');
+    myWorker.onmessage = function(e) {
+        console.log('FROM_______WORKER___________', e);
+    }
+}
+
 addListener();
 // setTime();
-tryPromiseCPUIntensive();
+// tryPromiseCPUIntensive();
+tryPromiseCPUIntensiveWithWorker();
 
