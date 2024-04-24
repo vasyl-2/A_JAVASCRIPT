@@ -1,22 +1,33 @@
 function setTime() {
     setTimeout(() => {
-        console.log('SOME______');
-    }, 30000);
+        let i = 0;
+        while (i < 9000000000) {
+            i++;
+        }
+        a++;
+        console.log('START____________!!!!!1', a);
+    }, 3000);
 
-    console.log('setTime_________')
 }
 
 function addListener() {
     document.querySelector('body').addEventListener('click', () => {
-        console.log('CLICK_______');
-        // setTimeout(() => {
-        //     console.log('NEXT_TIME_OUT____')
-        // }, 30);
+        let i = 0;
+        // while (i < 9000000000) {
+        while (i < 900) {
+            i++;
+        }
+
+        console.log('I___', i)
+
     })
 }
 
-// addListener();
+function tryPromise() {
+    const prom = new Promise((res, rej) => {
+        res(5)
+    })
+}
+addListener();
+setTime()
 
-// setTime();
-
-function test() { console.log('CLICK_______')}

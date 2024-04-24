@@ -1,0 +1,21 @@
+header {
+    --border-width: 5px;
+}
+
+.nav-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-list li {
+    /*width: max-content;*/
+    /*width: min-content;*/
+    border: var(--border-width) solid green;
+    flex-shrink: 1;
+}
+
+a {
+    text-decoration: none;
+}
