@@ -1,6 +1,9 @@
 // during first 3 seconds if we were to click we would see console log
 // after 3 sec callback from setTimeout is being queued, so whatever goes to queue should wait until queue is empty
 
+import { PubSub } from "./pubsub/pubsub.js";
+import {tasks, startQueue } from "./queue/queue.js";
+
 function cpuPress() {
     let i = 0;
     while (i < 5_000_000_000) {
@@ -59,4 +62,12 @@ function tryPromiseCPUIntensiveWithWorker() {
 // setTime();
 // tryPromiseCPUIntensive();
 // tryPromiseCPUIntensiveWithWorker();
+
+const newEvent = 'newEvent';
+startQueue();
+
+PubSub.on(newEvent, (e) => {
+    tasks.push(() => console.log('EVENT___EMITTED________', e))
+});
+PubSub.emit(newEvent, [1,2,3]);
 
